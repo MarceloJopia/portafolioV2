@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design con Imágenes y Texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h2>Responsive Design con Imágenes y Texto</h2>
+
+    <!-- Etiqueta <picture> para cambiar la imagen según el ancho de la pantalla -->
+    <picture>
+        <!-- Para móviles -->
+        <source media="(max-width: 576px)" srcset="imagenes/image-mobile.png">
+        <!-- Para tabletas -->
+        <source media="(min-width: 577px) and (max-width: 992px)" srcset="imagenes/image-tablet.png">
+        <!-- Para escritorios -->
+        <source media="(min-width: 993px) and (max-width: 1200px)" srcset="imagenes/image-desktop.png">
+        <!-- Para pantallas grandes -->
+        <source media="(min-width: 1201px)" srcset="imagenes/image-xlarge.png">
+        <!-- Imagen predeterminada para navegadores que no admiten <picture> o consultas de medios -->
+        <img src="imagenes/image-desktop.png" alt="Descripción de la imagen">
+    </picture>
+
+    <!-- Texto con tamaño responsivo -->
+    <p class="responsive-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vestibulum pharetra purus,
+        et sollicitudin purus fermentum eget.</p>
+</body>
+
+</html>

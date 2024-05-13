@@ -1,0 +1,38 @@
+/* Estilos para la navbar */
+.navbar {
+    background-color: #9a9a9a;
+    padding: 10px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+/* Estilos para el enlace activo */
+.navbar ul li a.active {
+    background-color: #f8f8f8;
+    color: #555;
+}
+
+/* Estilos para el enlace al pasar el mouse sobre él */
+.navbar ul li a:hover {
+    background-color: #555;
+}
+
+/* Estilos para el enlace visitado */
+.navbar ul li a:visited {
+    /* color: #ccc; */
+}

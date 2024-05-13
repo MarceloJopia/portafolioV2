@@ -1,0 +1,86 @@
+/* Estilos generales para la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+/* Estilos para el logo */
+.navbar h1 {
+  margin: 0;
+}
+
+/* Estilos para la lista de enlaces de navegación */
+.nav-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links li:last-child {
+  margin-right: 0;
+}
+
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Estilos para el menú desplegable (hamburger menu) */
+.hamburger-menu {
+  display: none; /* Ocultar por defecto en pantallas grandes */
+  cursor: pointer; /* Cambiar el cursor a pointer para indicar que es interactivo */
+}
+
+.hamburger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 24px;
+}
+
+/* Estilos responsivos para la barra de navegación */
+@media (max-width: 768px) {
+
+  /* Mostrar el hamburger menu solo en pantallas pequeñas */
+  .hamburger-menu {
+    display: block;
+  }
+
+  /* Ocultar la lista de enlaces de navegación solo en pantallas pequeñas */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute; /* Ajustar la posición absoluta para superponer el menú sobre la barra de navegación */
+    top: 56px; /* Alinear el menú con la barra de navegación */
+    right: 20px; /* Alinear el menú a la derecha */
+    background-color: #333; /* Cambiar el color de fondo */
+    padding: 10px; /* Añadir espacio interno */
+  }
+
+  .nav-links.active {
+    display: flex; /* Mostrar la lista de enlaces de navegación cuando se activa el menú */
+  }
+}
