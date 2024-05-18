@@ -8,18 +8,34 @@
 h1,h2,h3,h4,h5{
     font-family: "Nexa";
     font-weight: 900;
+    color: white;
 }
 
 p{
     font-family: "Poppins";
+    color: white;
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 button{
     font-family: "Nexa";
+    font-size: 16px;
+    color: white;
+    display: flex;
+    padding: 8px 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: #008EDE;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    border: none;
 }
 
-.boddy-desktop{
-    margin: 0px 10px 0px 138px;
+.justifyDesktop{
+    margin: 0px 34px 112px 176px;
+
 }
 
 .navbar-desktop{
@@ -31,7 +47,9 @@ button{
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
-    background: var(--EscalaDeGrises-medium, #737373);
+    background: #1b1b1b;
+    box-shadow: 4px 0px 16px 0px rgba(0, 240, 255, 0.20);
+    z-index: 2;
 }
 
 .navbar-desktop-logo{
@@ -50,13 +68,14 @@ button{
     left: 20px;
     gap: 0px;
     opacity: 0px;
+    color: white;
 }
 
 .navbar-icons-desktop{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 39px;
+    gap: 40px;
 }
 
 .navbar-desktop-socialnetworks-icon{
@@ -76,4 +95,232 @@ button{
     margin: 36px 0px 36px 0px;
 }
 
-
+.backgroundEffect{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    background-color: rgba(45, 47, 53);
+    background: linear-gradient(292deg, rgba(219, 0, 255, 1) 0%, rgba(113, 29, 132, 1) 8%, rgba(45, 47, 53, 1) 40%, rgba(45, 47, 53, 1) 55%, rgba(19, 101, 150, 1) 92%, rgba(0, 142, 222, 1) 100%);
+}
+.home{
+    display: flex;
+    padding: 72px 0px;
+    height: 75vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 72px;
+    align-self: stretch;
+}
+.titleHomeLayout{
+    display: flex;
+    padding: 40px 48px;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+.homeLogo{
+    width: 228px;
+    height: 228px;
+    flex-shrink: 0;
+    border-radius: 228px;
+}
+.parrafoHome{
+    display: flex;
+    width: 576px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.sobreMiLayout{
+    display: flex;
+    height: 75vh;
+    padding: 32px 24px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
+.TituloSobreMi{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+.parrafoSobreMi{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+.imgSobreMi{
+    display: flex;
+    width: 306px;
+    height: 359px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.habilidadesLayout{
+    display: flex;
+    flex-direction: row;
+    height: 75vh;
+    padding: 32px 24px;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 32px;
+    align-self: stretch;
+    flex-wrap: wrap;
+}
+.habilidadesLayoutTextos{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 32px;
+    width: 45%;
+}
+.habilidadesParrafo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.habilidadesTitulo{
+    display: flex;
+    align-items: center;
+}
+.barrasHabilidadLayout{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    width: 45%;
+}
+.barraHabilidadLayout{
+    display: flex;
+    flex-direction: row;
+    padding: 8px 22px 8px 0px;
+    justify-content: start;
+    align-items: center;
+    gap: 32px;
+}
+.imgBarraHabilidad{
+    display: flex;
+    width: 96px;
+    height: 96px;
+    justify-content: center;
+    align-items: center;
+}
+.barraHabilidad{
+    margin: auto;
+    width: 400px;
+    height: 24px;
+    border-radius: 12px;
+    background: #D9D9D9;
+}
+.proyectosHomeLayout{
+    display: flex;
+    height: 75vh;
+    padding: 32px 24px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    align-self: stretch;
+}
+.justifyTitleStart{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+.cardProyecto{
+    width: 250px;
+    height: 250px;
+    flex-shrink: 0;
+    border-radius: 32px;
+    background: url(images/mi-logo-gris-turquesa.png) lightgray 50% / cover no-repeat;
+    box-shadow: 2px 4px 4px 2px rgba(62, 62, 62, 0.35);
+}
+.cardProyectoFondoTitulo{
+    display: flex;
+    width: 250px;
+    height: 56px;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    border-radius: 0px 0px 32px 32px;
+    background: linear-gradient(90deg, #000 50%, rgba(0, 0, 0, 0.40) 100%);
+    position: relative;
+    top: 194px;
+}
+.cardProyectoTitulo{
+    display: flex;
+    padding: 8px 12px;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    align-self: stretch;
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.footerLayout{
+    display: flex;
+    padding: 8px 24px 40px 24px;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 8px;
+    flex-wrap: wrap;
+    background: #111111;
+}
+.footerContect{
+    display: flex;
+    min-width: 360px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+.footerTitleLayout{
+    display: flex;
+    padding: 40px 48px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+}
+.footerTitleText{
+    font-size: 32px;
+    font-weight: 500;
+    color: white;
+}
+.footerContacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    align-self: stretch;
+}
+.ContactContent{
+    display: flex;
+    padding: 0px 48px;
+    align-items: center;
+    gap: 24px;
+    align-self: stretch;
+}
+.ContactVector{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.textContacts{
+    font-size: 26px;
+    font-weight: 500;
+    color: white;
+}
