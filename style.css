@@ -1,16 +1,13 @@
 @import url(fonts/stylesheet.css);
 @import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
-
 *{
     margin: 0px;
 }
-
 h1,h2,h3,h4,h5{
     font-family: "Nexa";
     font-weight: 900;
     color: white;
 }
-
 p{
     font-family: "Poppins";
     color: white;
@@ -32,12 +29,29 @@ button{
     box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
     border: none;
 }
-
+button:hover{
+    cursor: pointer;
+}
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    background-color: #2D2F35;
+}
+::-webkit-scrollbar-thumb {
+    background: #00A3FF; 
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: #008EDE; 
+}
+/* MargenDesktop */
 .justifyDesktop{
     margin: 0px 34px 112px 176px;
-
 }
-
+/* NAVBAR */
 .navbar-desktop{
     position: fixed;
     display: inline-flex;
@@ -47,20 +61,19 @@ button{
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
-    background: #1b1b1b;
+    background: rgba(27, 27, 27, 1);
     box-shadow: 4px 0px 16px 0px rgba(0, 240, 255, 0.20);
     z-index: 2;
 }
-
 .navbar-desktop-logo{
     width: 96px;
     height: 96px;
     margin: 36px 0px 36px 0px;
     flex-shrink: 0;
     border-radius: 96px;
-    background: url(images/mi-logo-gris-turquesa.png) lightgray 50% / cover no-repeat;
+    background: url(images/mi-logo-gris-turquesa.png) 50% / cover no-repeat;
+    filter: brightness(0) invert(1)
 }
-
 .navbar-icon-desktop{
     width: 55px;
     height: 55px;
@@ -70,14 +83,12 @@ button{
     opacity: 0px;
     color: white;
 }
-
 .navbar-icons-desktop{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 40px;
 }
-
 .navbar-desktop-socialnetworks-icon{
     display: flex;
     width: 50px;
@@ -86,7 +97,6 @@ button{
     align-items: center;
     flex-shrink: 0;
 }
-
 .navbar-desktop-socialnetworks-icons{
     display: flex;
     flex-direction:column;
@@ -94,7 +104,15 @@ button{
     justify-content: space-between;
     margin: 36px 0px 36px 0px;
 }
-
+/* TOOLTIP NAVBAR */
+.arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right:10px solid black; 
+  }
+/* GRADIANT BACKGROUND */
 .backgroundEffect{
     height: 100vh;
     width: 100%;
@@ -103,6 +121,7 @@ button{
     background-color: rgba(45, 47, 53);
     background: linear-gradient(292deg, rgba(219, 0, 255, 1) 0%, rgba(113, 29, 132, 1) 8%, rgba(45, 47, 53, 1) 40%, rgba(45, 47, 53, 1) 55%, rgba(19, 101, 150, 1) 92%, rgba(0, 142, 222, 1) 100%);
 }
+/* BIENVENIDA HOME */
 .home{
     display: flex;
     padding: 72px 0px;
@@ -125,6 +144,7 @@ button{
     height: 228px;
     flex-shrink: 0;
     border-radius: 228px;
+    filter: drop-shadow(0 0 3.5rem rgba(0, 142, 222, 0.2));
 }
 .parrafoHome{
     display: flex;
@@ -133,6 +153,7 @@ button{
     align-items: center;
     gap: 10px;
 }
+/* SOBRE MI HOME */
 .sobreMiLayout{
     display: flex;
     height: 75vh;
@@ -157,12 +178,13 @@ button{
 }
 .imgSobreMi{
     display: flex;
-    width: 306px;
-    height: 359px;
+    height: 450px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    filter: drop-shadow(0 0 5rem rgba(221, 0, 255, 0.5));
 }
+/* HABILIDADES HOME */
 .habilidadesLayout{
     display: flex;
     flex-direction: row;
@@ -220,6 +242,7 @@ button{
     border-radius: 12px;
     background: #D9D9D9;
 }
+/* PROYECTOS HOME */
 .proyectosHomeLayout{
     display: flex;
     height: 75vh;
@@ -234,6 +257,29 @@ button{
     width: 100%;
     display: flex;
     justify-content: start;
+}
+/* PAGE PROYECTOS */
+.layoutProjectPage{
+    margin: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.projectPageTitle{
+    display: flex;
+    padding: 40px 48px;
+    align-items: start;
+    align-self: stretch;
+}
+.projectsLayout{
+    display: flex;
+    padding: 32px;
+    gap: 80px;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: space-between;
+    align-self: stretch;
+    flex-wrap: wrap;
 }
 .cardProyecto{
     width: 250px;
@@ -258,7 +304,7 @@ button{
 }
 .cardProyectoTitulo{
     display: flex;
-    padding: 8px 12px;
+    padding: 4px 20px;
     flex-direction: column;
     justify-content: center;
     flex: 1 0 0;
@@ -269,6 +315,7 @@ button{
     font-weight: 500;
     line-height: normal;
 }
+/* FOOTER */
 .footerLayout{
     display: flex;
     padding: 8px 24px 40px 24px;
