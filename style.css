@@ -75,13 +75,11 @@ button:hover{
     filter: brightness(0) invert(1)
 }
 .navbar-icon-desktop{
+    position: relative;
+    top: 0;
+    left: 0;
     width: 55px;
     height: 55px;
-    top: 20px;
-    left: 20px;
-    gap: 0px;
-    opacity: 0px;
-    color: white;
 }
 .navbar-icons-desktop{
     display: flex;
@@ -91,6 +89,9 @@ button:hover{
 }
 .navbar-desktop-socialnetworks-icon{
     display: flex;
+    position: relative;
+    top: 0;
+    left: 0;
     width: 50px;
     height: 50px;
     justify-content: center;
@@ -187,13 +188,69 @@ button:hover{
 }
 
 /* TOOLTIP NAVBAR */
-.arrow-left {
-    width: 0; 
-    height: 0; 
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent; 
-    border-right:10px solid black; 
-  }
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.navbar-icon-desktop .tooltiptext {
+    font-family: "Nexa";
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 125%;
+}
+
+.navbar-icon-desktop .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+.navbar-icon-desktop:hover .tooltiptext {
+    visibility: visible;
+}
+
+.navbar-desktop-socialnetworks-icon .tooltiptext {
+    font-family: "Nexa";
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: 125%;
+}
+
+.navbar-desktop-socialnetworks-icon .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -7px;
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+.navbar-desktop-socialnetworks-icon:hover .tooltiptext {
+    visibility: visible;
+}
+  
 /* GRADIANT BACKGROUND */
 .backgroundEffect{
     height: 100vh;
@@ -371,6 +428,7 @@ button:hover{
     align-self: stretch;
     flex-wrap: wrap;
 }
+
 .cardProyecto{
     width: 250px;
     height: 250px;
@@ -378,10 +436,14 @@ button:hover{
     border-radius: 32px;
     background: url(images/mi-logo-gris-turquesa.png) lightgray 50% / cover no-repeat;
     box-shadow: 2px 4px 4px 2px rgba(62, 62, 62, 0.35);
+    filter: drop-shadow(0 0 5rem rgba(221, 0, 255, 0.0)); /* Asegura que no brillen inicialmente */
+    transition: filter 0.5s; /* Transición suave para la propiedad filter */
 }
 .cardProyecto:hover{
-    filter: drop-shadow(0 0 5rem rgba(221, 0, 255, 0.5));
+    filter: drop-shadow(0 0 5rem rgba(221, 0, 255, 0.5)); /* Al poner el mouse encima, aplicar el efecto */
 }
+
+
 .cardProyectoFondoTitulo{
     display: flex;
     width: 250px;
