@@ -587,23 +587,24 @@ header{
 
 .lightbox-slider {
     display: flex;
-    overflow-x: hidden; /* Ocultar desbordamiento horizontal */
+    overflow-x: hidden;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: auto;
-    margin-bottom: 10px; /* Espacio entre imágenes y descripción */
+    margin-bottom: 10px;
+    transition: transform 0.3s ease; /* Añadimos transición para el desplazamiento */
 }
 
 .lightbox-slider img {
     max-width: 100%;
-    max-height: 70vh; /* Ajusta según sea necesario */
-    transition: transform 0.3s ease; /* Transición suave para el carrusel */
+    max-height: 336px;
+    transition: opacity 0.3s ease; /* Añadimos transición para la opacidad */
 }
 
 .lightbox-prev, .lightbox-next {
     position: absolute;
-    top: 50%;
+    top: 42%;
     transform: translateY(-50%);
     background: none;
     border: none;
@@ -619,6 +620,10 @@ header{
 
 .lightbox-next {
     right: 10px;
+}
+
+.lightbox-svg{
+    filter: drop-shadow(0 0 0rem black);
 }
 
 @media (min-width: 769px) {
