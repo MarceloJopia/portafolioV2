@@ -52,6 +52,10 @@ button:hover{
     margin: 0px 34px 112px 176px;
 }
 /* NAVBAR */
+header{
+    z-index: 99999;
+}
+
 .navbar-desktop{
     position: fixed;
     display: inline-flex;
@@ -528,6 +532,95 @@ button:hover{
     font-weight: 500;
     color: white;
 }
+/* Lightbox */
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    overflow: auto;
+    backdrop-filter: blur(5px);
+}
+
+.lightbox-content {
+    background-color: #1b1b1b;
+    margin: 10% auto;
+    border: none;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 1rem rgba(255, 255, 255, 0.3));
+}
+
+.lightbox-content img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh; /* Ajusta según sea necesario */
+    border-radius: 8px 8px 0px 0px;
+}
+
+.lightbox-content p{
+    padding: 20px;
+}
+.lightbox-content h3{
+    padding: 20px 20px 0px 20px;
+}
+
+.lightbox-close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lightbox-content {
+    /* Estilos anteriores... */
+    position: relative;
+    text-align: center; /* Centrar imágenes y botones */
+}
+
+.lightbox-slider {
+    display: flex;
+    overflow-x: hidden; /* Ocultar desbordamiento horizontal */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre imágenes y descripción */
+}
+
+.lightbox-slider img {
+    max-width: 100%;
+    max-height: 70vh; /* Ajusta según sea necesario */
+    transition: transform 0.3s ease; /* Transición suave para el carrusel */
+}
+
+.lightbox-prev, .lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.lightbox-prev {
+    left: 10px;
+}
+
+.lightbox-next {
+    right: 10px;
+}
+
 @media (min-width: 769px) {
     .navbarDesktopShow{
         display: block !important;

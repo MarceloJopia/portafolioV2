@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../images/favicon-16x16.png">
     <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/lightbox.js"></script>
 </head>
 <body>
     <header>
@@ -121,6 +122,35 @@
                 <h1>Proyectos</h1>
             </div>
             <div class="projectsLayout">
+
+                    <!-- Cada cardProyecto debe tener su contenido modal asociado -->
+                    <div class="cardProyecto" style="background: url(../images/ImgProyectos/FotomontajeQuilpue\ \(1\).png) lightgray 50% / cover no-repeat;" data-target="proyecto1">
+                        <div class="cardProyectoFondoTitulo">
+                            <p class="cardProyectoTitulo">Area Sendero Quilpue</p>
+                        </div>
+                    </div>
+                    <!-- Añadir más proyectos similares -->
+                
+                <!-- Contenido modal oculto para cada proyecto -->
+                <div class="lightbox-modal" id="proyecto1">
+                    <div class="lightbox-content">
+                        <div class="lightbox-slider">
+                            <img src="../images/ImgProyectos/FotomontajeQuilpue (1).png" alt="Area Sendero Quilpue">
+                            <img src="../images/ImgProyectos/FotomontajeQuilpue (2).png" alt="Otra Imagen 1">
+                            <img src="../images/ImgProyectos/FotomontajeQuilpue (3).png" alt="Otra Imagen 2">
+                            <!-- Agrega más imágenes según sea necesario -->
+                        </div>
+                        <h3>Area Sendero Quilpue</h3>
+                        <p>Descripción del proyecto Area Sendero Quilpue.</p>
+                        <!-- Botones de navegación del carrusel -->
+                        <button class="lightbox-prev">Prev</button>
+                        <button class="lightbox-next">Next</button>
+                    </div>
+                </div>
+                
+                <!-- Añadir más modales según los proyectos -->
+
+
                 <div href="" class="cardProyecto" style="background: url(../images/ImgProyectos/FotomontajeQuilpue\ \(1\).png) lightgray 50% / cover no-repeat;">
                     <div class="cardProyectoFondoTitulo">
                         <p class="cardProyectoTitulo">Area Sendero Quilpue</p>
