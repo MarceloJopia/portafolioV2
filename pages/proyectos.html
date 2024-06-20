@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" href="../images/favicon-16x16.png">
     <script src="../scripts/navbar.js"></script>
+    <script src="../scripts/lightbox.js"></script>
 </head>
 <body>
     <header>
@@ -120,7 +121,20 @@
             <div class="projectPageTitle">
                 <h1>Proyectos</h1>
             </div>
+            <div id="lightbox" class="lightbox">
+                <div class="lightbox-content">
+                    <span class="close">&times;</span>
+                    <img id="lightbox-image" src="" alt="">
+                    <h2 id="lightbox-title"></h2>
+                    <p id="lightbox-description"></p>
+                </div>
+            </div>
             <div class="projectsLayout">
+                <div class="cardProyecto" data-title="Area Sendero Quilpue" data-description="Descripción del proyecto 1" style="background: url(../images/ImgProyectos/FotomontajeQuilpue\ \(1\).png) lightgray 50% / cover no-repeat;">
+                    <div class="cardProyectoFondoTitulo">
+                        <p class="cardProyectoTitulo">Area Sendero Quilpue</p>
+                    </div>
+                </div>
                 <div href="" class="cardProyecto" style="background: url(../images/ImgProyectos/FotomontajeQuilpue\ \(1\).png) lightgray 50% / cover no-repeat;">
                     <div class="cardProyectoFondoTitulo">
                         <p class="cardProyectoTitulo">Area Sendero Quilpue</p>
