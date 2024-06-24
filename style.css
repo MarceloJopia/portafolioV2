@@ -657,6 +657,7 @@ header{
     max-width: 100%;
     max-height: 336px;
     transition: opacity 0.3s ease; /* Añadimos transición para la opacidad */
+    object-fit: cover;
 }
 
 .lightbox-prev, .lightbox-next {
